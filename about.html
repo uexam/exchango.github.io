@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Exchango - Smart Currency Converter</title>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     <style>
         * {
             margin: 0;
@@ -291,6 +293,9 @@
             -webkit-user-select: none;
             -moz-user-select: none;
             -ms-user-select: none;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
         }
 
         .feature-card::before {
@@ -331,6 +336,7 @@
             color: #666;
             line-height: 1.6;
             margin-bottom: 20px;
+            flex-grow: 1;
         }
 
         .feature-details {
@@ -362,7 +368,7 @@
 
         .currency-categories {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 30px;
             margin-bottom: 40px;
         }
@@ -372,11 +378,22 @@
             border-radius: 16px;
             padding: 25px;
             text-align: center;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
         }
 
         .category-icon {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #007AFF 0%, #0056CC 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            color: white;
+            font-size: 1.8rem;
         }
 
         .category-title {
@@ -390,6 +407,7 @@
             color: #666;
             font-size: 0.9rem;
             margin-bottom: 15px;
+            flex-grow: 1;
         }
 
         .currency-examples {
@@ -423,6 +441,22 @@
             padding: 20px;
             text-align: center;
             transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .tech-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #007AFF 0%, #0056CC 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            color: white;
+            font-size: 1.2rem;
         }
 
         .tech-name {
@@ -721,7 +755,7 @@
                 <div class="currency-showcase">
                     <div class="currency-categories">
                         <div class="currency-category">
-                            <div class="category-icon">💵</div>
+                            <div class="category-icon"><i data-lucide="dollar-sign"></i></div>
                             <h4 class="category-title">주요 통화</h4>
                             <p class="category-description">
                                 세계 경제를 이끄는 주요 통화들
@@ -736,7 +770,7 @@
                         </div>
 
                         <div class="currency-category">
-                            <div class="category-icon">🌏</div>
+                            <div class="category-icon"><i data-lucide="map"></i></div>
                             <h4 class="category-title">아시아 통화</h4>
                             <p class="category-description">
                                 아시아 각국의 다양한 통화들
@@ -751,7 +785,7 @@
                         </div>
 
                         <div class="currency-category">
-                            <div class="category-icon">🌍</div>
+                            <div class="category-icon"><i data-lucide="earth"></i></div>
                             <h4 class="category-title">기타 지역 통화</h4>
                             <p class="category-description">
                                 중남미, 아프리카, 오세아니아 통화
@@ -785,7 +819,7 @@
 
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon">💱</div>
+                    <div class="feature-icon"><i data-lucide="calculator"></i></div>
                     <h3>1. 환율 계산기</h3>
                     <p class="feature-description">
                         직관적인 인터페이스로 누구나 쉽게 사용할 수 있는 스마트 환율 계산기입니다.
@@ -809,7 +843,7 @@
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">💳</div>
+                    <div class="feature-icon"><i data-lucide="receipt"></i></div>
                     <h3>2. 정산 기능</h3>
                     <p class="feature-description">
                         해외여행이나 국제 비즈니스에서 발생하는 복잡한 다통화 정산을 한 번에 해결하세요.
@@ -829,7 +863,7 @@
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">📊</div>
+                    <div class="feature-icon"><i data-lucide="trending-up"></i></div>
                     <h3>3. 오늘의 환율</h3>
                     <p class="feature-description">
                         전 세계 주요 통화들의 실시간 환율 정보와 변동 현황을 한눈에 파악할 수 있습니다.
@@ -853,7 +887,7 @@
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">🔢</div>
+                    <div class="feature-icon"><i data-lucide="layers"></i></div>
                     <h3>4. 다중 환율 계산</h3>
                     <p class="feature-description">
                         한 번의 입력으로 여러 통화를 동시에 비교할 수 있는 강력한 기능입니다.
@@ -877,7 +911,7 @@
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">🎲</div>
+                    <div class="feature-icon"><i data-lucide="gamepad-2"></i></div>
                     <h3>5. 게임 (사다리 & 룰렛)</h3>
                     <p class="feature-description">
                         재미있는 게임 기능으로 친구들과 함께 다양한 결정을 내릴 수 있습니다.
@@ -901,7 +935,7 @@
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">⚙️</div>
+                    <div class="feature-icon"><i data-lucide="settings"></i></div>
                     <h3>6. 기준통화 설정</h3>
                     <p class="feature-description">
                         개인의 사용 패턴에 맞게 기준이 되는 통화를 설정할 수 있습니다.
@@ -921,7 +955,7 @@
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">🌍</div>
+                    <div class="feature-icon"><i data-lucide="languages"></i></div>
                     <h3>7. 언어 설정</h3>
                     <p class="feature-description">
                         전 세계 사용자를 위해 7개 주요 언어를 지원합니다.
@@ -941,7 +975,7 @@
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">🎨</div>
+                    <div class="feature-icon"><i data-lucide="palette"></i></div>
                     <h3>8. 테마 설정</h3>
                     <p class="feature-description">
                         사용자의 취향과 환경에 맞는 다양한 테마를 제공합니다.
@@ -977,26 +1011,32 @@
             
             <div class="tech-stack">
                 <div class="tech-item">
+                    <div class="tech-icon"><i data-lucide="smartphone"></i></div>
                     <div class="tech-name">React Native</div>
                     <div class="tech-description">크로스 플랫폼 네이티브 성능</div>
                 </div>
                 <div class="tech-item">
+                    <div class="tech-icon"><i data-lucide="code"></i></div>
                     <div class="tech-name">TypeScript</div>
                     <div class="tech-description">안정적인 타입 시스템</div>
                 </div>
                 <div class="tech-item">
+                    <div class="tech-icon"><i data-lucide="database"></i></div>
                     <div class="tech-name">AsyncStorage</div>
                     <div class="tech-description">로컬 데이터 영구 저장</div>
                 </div>
                 <div class="tech-item">
+                    <div class="tech-icon"><i data-lucide="globe"></i></div>
                     <div class="tech-name">i18next</div>
                     <div class="tech-description">다국어 지원 시스템</div>
                 </div>
                 <div class="tech-item">
+                    <div class="tech-icon"><i data-lucide="zap"></i></div>
                     <div class="tech-name">Smart Caching</div>
                     <div class="tech-description">지능형 환율 캐싱</div>
                 </div>
                 <div class="tech-item">
+                    <div class="tech-icon"><i data-lucide="wifi-off"></i></div>
                     <div class="tech-name">Offline Support</div>
                     <div class="tech-description">오프라인 모드 지원</div>
                 </div>
@@ -1017,5 +1057,9 @@
     </div>
 
 <!--    <script src="https://uexam.github.io/exchango.github.io/translations.js"></script>-->
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
 </body>
 </html>
